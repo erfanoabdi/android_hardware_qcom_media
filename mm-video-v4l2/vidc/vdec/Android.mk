@@ -29,6 +29,10 @@ ifeq ($(TARGET_KERNEL_VERSION), 4.9)
 libmm-vdec-def += -D_TARGET_KERNEL_VERSION_49_
 endif
 TARGETS_THAT_USE_HEVC_ADSP_HEAP := msm8226 msm8974
+libmm-vdec-def += -Wno-constant-logical-operand
+libmm-vdec-def += -Wno-implicit-fallthrough
+libmm-vdec-def += -Wno-enum-compare-switch
+
 TARGETS_THAT_HAVE_VENUS_HEVC := apq8084 msm8994 msm8996
 TARGETS_THAT_SUPPORT_UBWC := msm8996 msm8953 msm8998 sdm660 apq8098_latv
 TARGETS_THAT_NEED_SW_VDEC := msm8937 msm8909
